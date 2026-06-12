@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ta-en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>தலைமை 360 — Thalaimai 360 | Leadership & Governance Support</title>
+  <meta name="description" content="Thalaimai 360 is a trusted partner to elected representatives, enabling them to strengthen public trust, enhance governance effectiveness, and drive constituency development." />
+  <meta name="theme-color" content="#111111" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- MOBILE HEADER (Visible on mobile/tablet only) -->
+  <header class="mobile-header">
+    <div class="mobile-header__brand">
+      <span class="mobile-header__ta">தலைமை</span>360
+    </div>
+    <button id="menu-btn" class="mobile-header__menu" aria-label="Toggle Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="mobile-menu" class="mobile-menu">
+    <nav class="mobile-menu__nav">
+      <a href="#about" class="mobile-menu__link" data-close>About Us</a>
+      <a href="#services" class="mobile-menu__link" data-close>Our Services</a>
+      <a href="#approach" class="mobile-menu__link" data-close>Our Approach</a>
+      <a href="#partnerships" class="mobile-menu__link" data-close>Partnerships</a>
+      <a href="#contact" class="mobile-menu__link" data-close>Contact</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="#contact" class="btn btn--black" data-close>Partner with Us</a>
+    </div>
+  </div>
+
+  <div class="app-layout">
+    <!-- LEFT SIDEBAR NAVIGATION (Desktop only) -->
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <a href="#about" class="sidebar__logo">
+          <span class="sidebar__logo-ta">தலைமை</span>360
+        </a>
+        <div class="sidebar__subtitle">LEADERSHIP. GOVERNANCE. IMPACT.</div>
+      </div>
+
+      <nav class="sidebar__nav" id="sidebar-nav">
+        <ul>
+          <li class="sidebar__item active">
+            <a href="#about" class="sidebar__link">
+              <span class="sidebar__link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span class="sidebar__link-text">About Us</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#services" class="sidebar__link">
+              <span class="sidebar__link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="9"></rect>
+                  <rect x="14" y="3" width="7" height="5"></rect>
+                  <rect x="14" y="12" width="7" height="9"></rect>
+                  <rect x="3" y="16" width="7" height="5"></rect>
+                </svg>
+              </span>
+              <span class="sidebar__link-text">Our Services</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#approach" class="sidebar__link">
+              <span class="sidebar__link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </span>
+              <span class="sidebar__link-text">Our Approach</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#partnerships" class="sidebar__link">
+              <span class="sidebar__link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </span>
+              <span class="sidebar__link-text">Partnerships</span>
+            </a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#contact" class="sidebar__link">
+              <span class="sidebar__link-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <span class="sidebar__link-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__footer">
+        <a href="#contact" class="btn btn--black sidebar__cta">Partner with Us</a>
+      </div>
+    </aside>
+
+    <!-- RIGHT PANEL CONTENT -->
+    <main class="main-content">
+
+      <!-- ═══════════ SECTION: ABOUT (HERO + CORE) ═══════════ -->
+      <section id="about" class="section sec-about">
+        <!-- Giant faint background Tamil character watermark (அ - A) -->
+        <div class="section-watermark" aria-hidden="true">அ</div>
+
+        <!-- Rotating circular stamp seal - highly creative visual addition -->
+        <div class="rotating-seal" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="130" height="130">
+            <path id="sealPath" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="none" />
+            <text font-family="var(--body)" font-size="6" font-weight="700" letter-spacing="0.12em" fill="var(--black)">
+              <textPath href="#sealPath">
+                • THALAIMAI 360 • LEADERSHIP • GOVERNANCE • IMPACT •
+              </textPath>
+            </text>
+          </svg>
+          <div class="rotating-seal__center">360</div>
+        </div>
+
+        <div class="hero-block">
+          <div class="hero-block__left">
+            <div class="hero-block__tagline-ta">அரசியல் பிழைத்தோர்க்கு அறம் கூற்றாகும்</div>
+            <h1 class="hero-block__title">
+              Transforming Electoral Mandates into Measurable Public Impact
+            </h1>
+            <p class="hero-block__description">
+              Thalaimai 360 is a trusted partner to elected representatives, enabling them to strengthen public trust, enhance governance effectiveness, and drive constituency development through structured strategy, workflows, and stakeholder partnerships.
+            </p>
+            <div class="hero-block__ctas">
+              <a href="#services" class="btn btn--black">Explore Services</a>
+              <a href="#contact" class="btn btn--outline">Contact Us</a>
+            </div>
+          </div>
+          
+          <div class="hero-block__right">
+            <div class="stat-widget">
+              <div class="stat-widget__item">
+                <div class="stat-widget__number-row">
+                  <span class="stat-widget__number" id="rep-counter" data-to="110000">0</span>
+                  <span class="stat-widget__plus">+</span>
+                </div>
+                <div class="stat-widget__label">Elected Representatives in TN</div>
+              </div>
+              <div class="stat-widget__item stat-widget__item--highlight">
+                <div class="stat-widget__number-row">
+                  <span class="stat-widget__number">ZERO</span>
+                </div>
+                <div class="stat-widget__label">Structured Governance Training</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="office-lead">
+          <div class="section-header">
+            <div class="architectural-marker">
+              <span class="architectural-marker__num">01</span>
+              <span class="architectural-marker__line"></span>
+            </div>
+            <span class="section-label">Institutional Mandate</span>
+            <h2 class="section-title">The Office of Elected Representative Excellence™</h2>
+          </div>
+          <div class="office-lead__content">
+            <p>
+              Constituency management has evolved beyond traditional public relations. Modern leadership requires a multi-dimensional, data-driven framework that balances policy advisory, administrative excellence, public trust, and digital outreach. Thalaimai 360 bridges the gap by building dedicated, professional capacity for public office holders.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ SECTION: SERVICES (12 CORE SERVICES GRID) ═══════════ -->
+      <section id="services" class="section sec-services">
+        <!-- Giant faint background Tamil character watermark (செ - Se) -->
+        <div class="section-watermark" aria-hidden="true">செ</div>
+
+        <div class="section-header">
+          <div class="architectural-marker">
+            <span class="architectural-marker__num">02</span>
+            <span class="architectural-marker__line"></span>
+          </div>
+          <span class="section-label">Core Capabilities</span>
+          <h2 class="section-title">360° Leadership & Governance Support</h2>
+          <p class="section-subtitle">A comprehensive suite of advisory and management services designed specifically for political leaders, legislators, and executives.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">01</span>
+              <h3 class="service-card__title">Executive Leadership Development</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Leadership coaching & mentoring</li>
+              <li>Personal branding & public image</li>
+              <li>Dress etiquette & executive grooming</li>
+              <li>Time management & productivity</li>
+              <li>Stress & stakeholder management</li>
+              <li>High performance mindset</li>
+            </ul>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">02</span>
+              <h3 class="service-card__title">Strategic Communication & Public Influence</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Speech writing & messaging</li>
+              <li>Public speaking & stage presence</li>
+              <li>Media interview preparation</li>
+              <li>Press meets & media handling</li>
+              <li>Crisis communication management</li>
+              <li>Persuasive communication skills</li>
+            </ul>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">03</span>
+              <h3 class="service-card__title">Stakeholder Relations & Public Affairs</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Citizen engagement strategy</li>
+              <li>Community relationship building</li>
+              <li>Party cadre engagement</li>
+              <li>NGO & civil society partnerships</li>
+              <li>Industry & business relations</li>
+              <li>Key stakeholder relationship management</li>
+            </ul>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">04</span>
+              <h3 class="service-card__title">Governance, Policy & Legislative Advisory</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Policy & issue analysis</li>
+              <li>Bills, rules & legislative briefing</li>
+              <li>Assembly / Parliament preparation</li>
+              <li>Departmental issue mapping</li>
+              <li>Government scheme insights</li>
+              <li>Policy implementation support</li>
+            </ul>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">05</span>
+              <h3 class="service-card__title">Constituency Intelligence & Strategic Planning</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Ward / village level profiling</li>
+              <li>Constituency SWOT analysis</li>
+              <li>Issue mapping & prioritization</li>
+              <li>Public sentiment assessment</li>
+              <li>Demographic & socio-economic analysis</li>
+              <li>Development gap assessment</li>
+              <li>Data-driven strategy & planning</li>
+            </ul>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">06</span>
+              <h3 class="service-card__title">Citizen Relations & Public Service Management</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Grievance collection systems</li>
+              <li>Grievance tracking & resolution</li>
+              <li>Citizen feedback mechanisms</li>
+              <li>Public consultation programs</li>
+              <li>People's outreach initiatives</li>
+              <li>Constituency help desk models</li>
+            </ul>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">07</span>
+              <h3 class="service-card__title">Community Leadership & Social Inclusion</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Women empowerment initiatives</li>
+              <li>Youth engagement & leadership</li>
+              <li>Volunteer network development</li>
+              <li>Skill development awareness</li>
+              <li>Community leadership identification</li>
+              <li>Social impact programs</li>
+            </ul>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">08</span>
+              <h3 class="service-card__title">Digital Influence & Media Strategy</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Social media strategy & management</li>
+              <li>Digital reputation management</li>
+              <li>Content creation & storytelling</li>
+              <li>Achievement documentation</li>
+              <li>Media relations management</li>
+              <li>Online citizen engagement</li>
+            </ul>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">09</span>
+              <h3 class="service-card__title">Administrative Excellence & Institutional Coordination</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Department coordination strategy</li>
+              <li>Effective review meeting frameworks</li>
+              <li>Monitoring & follow-up systems</li>
+              <li>Governance workflow optimization</li>
+              <li>Project tracking mechanisms</li>
+              <li>Administrative communication support</li>
+            </ul>
+          </article>
+
+          <!-- Card 10 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">10</span>
+              <h3 class="service-card__title">Resource Mobilisation & Partnerships</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Constituency development roadmap</li>
+              <li>CSR opportunity identification</li>
+              <li>Corporate partnership facilitation</li>
+              <li>NGO convergence support</li>
+              <li>Government scheme convergence</li>
+              <li>Sustainable development planning</li>
+              <li>Impact assessment & reporting</li>
+            </ul>
+          </article>
+
+          <!-- Card 11 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">11</span>
+              <h3 class="service-card__title">Public Trust & Political Sustainability</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Voter engagement frameworks</li>
+              <li>Public perception analysis</li>
+              <li>Constituency performance tracking</li>
+              <li>Achievement documentation</li>
+              <li>Volunteer & booth level engagement</li>
+              <li>Continuous public connect strategies</li>
+            </ul>
+          </article>
+
+          <!-- Card 12 -->
+          <article class="service-card" data-r>
+            <div class="service-card__header">
+              <span class="service-card__badge-num">12</span>
+              <h3 class="service-card__title">Leadership Capacity & Knowledge Systems</h3>
+            </div>
+            <ul class="service-card__list">
+              <li>Policy & governance workshops</li>
+              <li>Team & office capacity building</li>
+              <li>Research & documentation support</li>
+              <li>Best practices sharing</li>
+              <li>Learning resources & updates</li>
+              <li>Leadership knowledge library</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══════════ SECTION: APPROACH ═══════════ -->
+      <section id="approach" class="section sec-approach">
+        <!-- Giant faint background Tamil character watermark (நெ - Ne) -->
+        <div class="section-watermark" aria-hidden="true">நெ</div>
+
+        <div class="section-header">
+          <div class="architectural-marker">
+            <span class="architectural-marker__num">03</span>
+            <span class="architectural-marker__line"></span>
+          </div>
+          <span class="section-label">Methodology</span>
+          <h2 class="section-title">Our Strategic Approach</h2>
+          <p class="section-subtitle">We employ a rigorous, analytical cycle to guarantee that constituency programs deliver measurable results.</p>
+        </div>
+
+        <div class="approach-flow">
+          <!-- Step 1 -->
+          <div class="approach-step" data-r>
+            <div class="approach-step__badge">01</div>
+            <h3 class="approach-step__name">Analyze</h3>
+            <p class="approach-step__desc">Conduct in-depth audits, constituency profiles, and gap mapping to generate actionable intelligence.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="approach-step" data-r>
+            <div class="approach-step__badge">02</div>
+            <h3 class="approach-step__name">Plan</h3>
+            <p class="approach-step__desc">Formulate a strategic roadmap targeting specific development indices and governance milestones.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="approach-step" data-r>
+            <div class="approach-step__badge">03</div>
+            <h3 class="approach-step__name">Engage</h3>
+            <p class="approach-step__desc">Deploy structured outreach networks connecting the office holder directly with local citizen bodies.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="approach-step" data-r>
+            <div class="approach-step__badge">04</div>
+            <h3 class="approach-step__name">Monitor</h3>
+            <p class="approach-step__desc">Track scheme implementation, response times, and program health through digital dashboards.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="approach-step" data-r>
+            <div class="approach-step__badge">05</div>
+            <h3 class="approach-step__name">Impact</h3>
+            <p class="approach-step__desc">Deliver verifiable community transformation and document success for electoral credibility.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ SECTION: PARTNERSHIPS ═══════════ -->
+      <section id="partnerships" class="section sec-partnerships">
+        <!-- Giant faint background Tamil character watermark (கூ - Koo) -->
+        <div class="section-watermark" aria-hidden="true">கூ</div>
+
+        <div class="partnerships-block">
+          <div class="partnerships-block__left">
+            <div class="section-header">
+              <div class="architectural-marker">
+                <span class="architectural-marker__num">04</span>
+                <span class="architectural-marker__line"></span>
+              </div>
+              <span class="section-label">Collaboration</span>
+              <h2 class="section-title">Our Strategic Partnerships</h2>
+              <p class="section-subtitle">We coordinate efforts across multiple domains to aggregate resources and drive sustainable constituency growth.</p>
+            </div>
+            <ul class="partnerships-list">
+              <li>
+                <strong>Government Departments</strong>
+                <span>Integrating state schemes with local development objectives.</span>
+              </li>
+              <li>
+                <strong>NGOs & Civil Society</strong>
+                <span>Leveraging local field expertise and grassroot community networks.</span>
+              </li>
+              <li>
+                <strong>Corporate & CSR Partners</strong>
+                <span>Securing private sector funding for critical infrastructure gaps.</span>
+              </li>
+              <li>
+                <strong>Academic & Research Institutions</strong>
+                <span>Applying evidence-based models and technical impact validation.</span>
+              </li>
+              <li>
+                <strong>Community Leaders & Volunteers</strong>
+                <span>Empowering active citizens to lead ward-level action units.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="partnerships-block__right">
+            <blockquote class="pullquote">
+              <p class="pullquote__text">
+                "Empowering Leaders.<br>Engaging Citizens.<br>Transforming Constituencies."
+              </p>
+              <cite class="pullquote__author">— Thalaimai 360 Core Philosophy</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ SECTION: CONTACT (FOOTER & DETAILS) ═══════════ -->
+      <section id="contact" class="section sec-contact">
+        <!-- Giant faint background Tamil character watermark (த - Tha) -->
+        <div class="section-watermark" aria-hidden="true">த</div>
+
+        <div class="contact-grid">
+          <div class="contact-grid__info">
+            <div class="section-header">
+              <div class="architectural-marker">
+                <span class="architectural-marker__num">05</span>
+                <span class="architectural-marker__line"></span>
+              </div>
+              <span class="section-label">Get in Touch</span>
+              <h2 class="section-title">Establish Leadership Office Support</h2>
+              <p class="section-subtitle">Partner with Thalaimai 360 to bring professional, structured governance excellence to your constituency.</p>
+            </div>
+
+            <div class="founder-card">
+              <div class="founder-card__title">Srikala Sukumar</div>
+              <div class="founder-card__role">Founder, Thalaimai 360</div>
+              <div class="founder-card__contact-item">
+                <strong>Phone:</strong> <a href="tel:+919940965032">+91 9940965032</a>
+              </div>
+              <div class="founder-card__contact-item">
+                <strong>Email:</strong> <a href="mailto:thalaimai360@gmail.com">thalaimai360@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-grid__form-container">
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully. Srikala Sukumar will contact you shortly.'); this.reset();">
+              <div class="form-group">
+                <label for="form-name">Name / Representative Office</label>
+                <input type="text" id="form-name" required placeholder="E.g., Office of MLA, Madurai South" />
+              </div>
+              <div class="form-group">
+                <label for="form-email">Official Email</label>
+                <input type="email" id="form-email" required placeholder="name@domain.com" />
+              </div>
+              <div class="form-group">
+                <label for="form-phone">Contact Number</label>
+                <input type="tel" id="form-phone" required placeholder="E.g., +91 98765 43210" />
+              </div>
+              <div class="form-group">
+                <label for="form-message">Consultation Requirements</label>
+                <textarea id="form-message" rows="4" required placeholder="Describe the leadership or constituency mapping services required..."></textarea>
+              </div>
+              <button type="submit" class="btn btn--black btn--full">Request Corporate Profile</button>
+            </form>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footer__brand">
+            <span class="footer__logo-ta">தலைமை</span>360
+          </div>
+          <div class="footer__meta">
+            <span>&copy; 2026 Thalaimai 360. All Rights Reserved.</span>
+            <span>Made in Tamil Nadu, India.</span>
+          </div>
+        </footer>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
