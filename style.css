@@ -145,6 +145,7 @@ body::after {
   cursor: pointer;
   transition: all var(--transition-fast);
   white-space: nowrap;
+  min-height: 48px; /* Safe mobile tap target size */
 }
 
 .btn--black {
@@ -254,6 +255,7 @@ body::after {
   font-weight: 500;
   color: var(--gray);
   transition: color var(--transition-fast);
+  min-height: 44px; /* Tap target */
 }
 
 .sidebar__link:hover,
@@ -337,11 +339,13 @@ body::after {
 .hero-block__tagline-ta {
   font-family: var(--ta);
   font-weight: 800;
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  line-height: 1.2;
+  font-size: clamp(1.3rem, 3.5vw, 2.5rem); /* Prevents Tamil tagline overflow on 320px viewports */
+  line-height: 1.35;
   color: var(--black);
   margin-bottom: 1.5rem;
   letter-spacing: -0.01em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero-block__title {
@@ -864,12 +868,13 @@ body::after {
   width: 100%;
   padding: 1rem;
   font-family: var(--body);
-  font-size: 0.9rem;
+  font-size: 16px; /* Prevents auto zoom-in on iOS Safari viewports (needs to be >= 16px) */
   background-color: var(--bg-parch);
   border: 1px solid var(--light-gray);
   color: var(--black);
   transition: all var(--transition-fast);
   outline: none;
+  border-radius: 0;
 }
 
 .form-group input:focus,
@@ -994,6 +999,7 @@ body::after {
     background: none;
     border: none;
     cursor: pointer;
+    min-height: 44px; /* Ensure touch target height */
   }
 
   .mobile-header__menu span {
@@ -1055,6 +1061,9 @@ body::after {
     opacity: 0;
     transform: translateY(15px);
     transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
+    min-height: 44px; /* Touch target */
+    display: flex;
+    align-items: center;
   }
 
   .mobile-menu.is-open .mobile-menu__link {
@@ -1139,6 +1148,10 @@ body::after {
     gap: 3rem;
   }
 
+  .pullquote {
+    padding: 2.5rem 1.5rem; /* Prevents pullquote text squishing on mobile screens */
+  }
+
   .footer {
     flex-direction: column;
     align-items: center;
@@ -1155,6 +1168,15 @@ body::after {
 }
 
 @media (max-width: 500px) {
+  .section {
+    padding: 3.5rem 1.25rem; /* More compact padding for very small viewports */
+  }
+  .sec-about {
+    padding-top: 6.5rem; /* Match header height */
+  }
+  .stat-widget__item {
+    padding: 1.5rem; /* Fit text cleanly on narrow viewports */
+  }
   .contact-form {
     padding: 2rem 1.25rem;
   }
@@ -1167,5 +1189,25 @@ body::after {
   }
   .service-card {
     padding: 2.2rem 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Fallback to simple full-width stack on extremely small devices */
+  }
+  .service-card {
+    padding: 1.8rem 1rem;
+  }
+  .approach-flow::before {
+    left: 2.5rem; /* Adjust alignment for smaller padding spaces */
+  }
+  .approach-step {
+    gap: 1rem;
+  }
+  .approach-step__badge {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
   }
 }
