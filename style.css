@@ -479,7 +479,7 @@ body::after {
   max-width: 900px;
 }
 
-/* Architectural section markers (Visual enhancement instead of bullet lists) */
+/* Architectural section markers */
 .architectural-marker {
   display: flex;
   align-items: center;
@@ -1052,7 +1052,22 @@ body::after {
     font-size: 1.6rem;
     font-weight: 900;
     color: var(--gray);
+    opacity: 0;
+    transform: translateY(15px);
+    transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
   }
+
+  .mobile-menu.is-open .mobile-menu__link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Sequenced animation delays for menu links */
+  .mobile-menu.is-open .mobile-menu__link:nth-child(1) { transition-delay: 0.1s; }
+  .mobile-menu.is-open .mobile-menu__link:nth-child(2) { transition-delay: 0.15s; }
+  .mobile-menu.is-open .mobile-menu__link:nth-child(3) { transition-delay: 0.2s; }
+  .mobile-menu.is-open .mobile-menu__link:nth-child(4) { transition-delay: 0.25s; }
+  .mobile-menu.is-open .mobile-menu__link:nth-child(5) { transition-delay: 0.3s; }
 
   .mobile-menu__link:hover {
     color: var(--bg-white);
@@ -1077,13 +1092,46 @@ body::after {
     padding-top: 8rem; /* Account for mobile sticky header */
   }
 
+  /* Creative vertical timeline flow for mobile */
   .approach-flow {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    position: relative;
+    padding-left: 1rem;
+    margin-top: 3rem;
   }
 
   .approach-flow::before {
-    display: none;
+    display: block;
+    content: "" / "";
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: 3rem; /* Align to badge center: 1rem padding + 2rem (half of 4rem badge) */
+    width: 1px;
+    height: auto;
+    background-color: var(--light-gray);
+    z-index: 1;
+  }
+
+  .approach-step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .approach-step__badge {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    z-index: 2; /* Keep above the timeline line */
+  }
+
+  .approach-step__name {
+    margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
   }
 
   .contact-grid {
@@ -1108,9 +1156,16 @@ body::after {
 
 @media (max-width: 500px) {
   .contact-form {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
   }
   .founder-card {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
+  }
+  /* Ensure grids scale to small screens cleanly */
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .service-card {
+    padding: 2.2rem 1.5rem;
   }
 }
